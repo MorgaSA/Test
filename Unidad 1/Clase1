@@ -1,0 +1,188 @@
+scala> for(name <- names){
+     | if(name.StartsWith("C")){
+     | println(name)
+     | println(s"$starts with a C")
+     | }
+     | }
+<console>:27: error: value StartsWith is not a member of String
+       if(name.StartsWith("C")){
+               ^
+<console>:29: error: not found: value starts
+       println(s"$starts with a C")
+                  ^
+
+scala> 
+
+scala> for(name <- names){
+     |      | if(name.StartsWith("C")){
+<console>:2: error: ';' expected but 'if' found.
+     | if(name.StartsWith("C")){
+       ^
+
+scala>      | println(name)
+<console>:24: error: not found: value name
+ println(name)
+         ^
+
+scala>      | println(s"$starts with a C")
+<console>:24: error: not found: value starts
+ println(s"$starts with a C")
+            ^
+
+scala>      | }
+<console>:1: error: eof expected but '}' found.
+     | }
+       ^
+
+scala>      | }
+<console>:1: error: eof expected but '}' found.
+     | }
+       ^
+
+scala> for(name <- names){
+     | if(name.StartsWith("C")){
+     | println(name)
+     | 
+Display all 636 possibilities? (y or n)
+     | 
+     | 
+You typed two blank lines.  Starting a new command.
+
+scala> 
+
+scala> names.
+
+scala> 
+
+scala> 
+
+scala> 
+
+scala> 
+
+scala> 
+
+scala> for(name <- names){
+     | if(name.startsWith("C")){
+     | println(name)
+     | println(s"$name starts with a C")
+     | }
+     | }
+Chiristian
+Chiristian starts with a C
+Carlos
+Carlos starts with a C
+
+scala> 
+
+scala> var x = 0
+x: Int = 0
+
+scala> while(x<5){
+     | println(s"x is current $x")
+     | println(s"x is still les than 5, adding 1 to x")
+     | x=x+1
+     | }
+x is current 0
+x is still les than 5, adding 1 to x
+x is current 1
+x is still les than 5, adding 1 to x
+x is current 2
+x is still les than 5, adding 1 to x
+x is current 3
+x is still les than 5, adding 1 to x
+x is current 4
+x is still les than 5, adding 1 to x
+
+scala> var y =0
+y: Int = 0
+
+scala> while(y < 10){
+     | println(s"y is currently $y")
+     | println(s"y is still less than 10, add 1 to y")
+     | y = y +1
+     | if(y==3) break
+     | }
+<console>:30: error: not found: value break
+       if(y==3) break
+                ^
+
+scala> import util.control.Breaks._
+import util.control.Breaks._
+
+scala> while(y < 10){
+     | println(s"y is currently $y")
+     | println(s"y is still less than 10, add 1 to y")
+     | y = y +1
+     | if(y==3) break
+     | }
+y is currently 0
+y is still less than 10, add 1 to y
+y is currently 1
+y is still less than 10, add 1 to y
+y is currently 2
+y is still less than 10, add 1 to y
+scala.util.control.BreakControl
+
+scala> def sinple(): Unit = {
+     | println("simple print")
+     | }
+sinple: ()Unit
+
+scala> simple()
+<console>:27: error: not found: value simple
+       simple()
+       ^
+
+scala> sinple()
+simple print
+
+scala> def adder(num1:Int, num2:Int): Int={
+     | return num1+num2
+     | }
+adder: (num1: Int, num2: Int)Int
+
+scala> adder(2.0,1)
+<console>:29: error: type mismatch;
+ found   : Double(2.0)
+ required: Int
+       adder(2.0,1)
+             ^
+
+scala> adder(2,1)
+res10: Int = 3
+
+scala> adder(5,5)
+res11: Int = 10
+
+scala> def greetName(name:String): String={
+     | return s"hello $name"
+     | }
+greetName: (name: String)String
+
+scala> greetName("Christian")
+res12: String = hello Christian
+
+scala> println(fullgreet)
+<console>:27: error: not found: value fullgreet
+       println(fullgreet)
+               ^
+
+scala> var fullgreet = greetName("Christian")
+fullgreet: String = hello Christian
+
+scala> def isprime(num:Int): Boolean = {
+     | for(n <- Range(2, num)){
+     | if(num%n == 0){
+     | return false
+     | }
+     | }
+     | return true
+     | }
+isprime: (num: Int)Boolean
+
+scala> println(isprime(23))
+true
+
+scala> 
+
